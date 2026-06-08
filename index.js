@@ -6,7 +6,7 @@ app.use(express.json());
 // CONFIGURAÇÕES — preencha com seus dados
 // ============================================================
 const CONFIG = {
-  ANTHROPIC_API_KEY: "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",   // console.anthropic.com
+  ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,   // console.anthropic.com
   ZAPI_INSTANCE:     "3F45B51C74DFF2AA7AA7FE743DE93AC5",   // z-api.io (opcional, ver README)
   ZAPI_TOKEN:        "32AB06403048DB069ED55973",
   SEU_NUMERO:        "5511992564805",           // seu número para notificações
