@@ -6,12 +6,12 @@ app.use(express.json());
 // CONFIGURAÇÕES — preencha com seus dados
 // ============================================================
 const CONFIG = {
-  ANTHROPIC_API_KEY: "COLE_SUA_CHAVE_AQUI",   // console.anthropic.com
-  ZAPI_INSTANCE:     "COLE_SUA_INSTANCE_ID",   // z-api.io (opcional, ver README)
-  ZAPI_TOKEN:        "COLE_SEU_TOKEN",
-  SEU_NUMERO:        "5511999999999",           // seu número para notificações
-  PIX_CHAVE:         "COLE_SUA_CHAVE_PIX",
-  MERCADO_PAGO_LINK: "COLE_SEU_LINK_MP",
+  ANTHROPIC_API_KEY: "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",   // console.anthropic.com
+  ZAPI_INSTANCE:     "3F45B51C74DFF2AA7AA7FE743DE93AC5",   // z-api.io (opcional, ver README)
+  ZAPI_TOKEN:        "32AB06403048DB069ED55973",
+  SEU_NUMERO:        "5511992564805",           // seu número para notificações
+  PIX_CHAVE:         "11992564805",
+  MERCADO_PAGO_LINK: "https://mpago.la/2e62Exg",
 };
 
 // ============================================================
