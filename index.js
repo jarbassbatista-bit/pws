@@ -94,23 +94,26 @@ async function chamarClaude(numero, mensagemUsuario) {
   addMensagem(numero, "user", mensagemUsuario);
   const historico = getHistorico(numero);
 
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
+  const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "x-api-key": CONFIG.ANTHROPIC_API_KEY,
-      "anthropic-version": "2023-06-01",
+      "Authorization": `Bearer ${process.env.GROQ_API_KEY}`,
     },
     body: JSON.stringify({
-      model: "claude-sonnet-4-20250514",
+      model: "llama3-70b-8192",
       max_tokens: 1000,
-      system: SISTEMA_PROMPT,
-      messages: historico,
+      messages: [
+        { role: "system", content: SISTEMA_PROMPT },
+        ...historico,
+      ],
     }),
   });
 
   const data = await response.json();
-  const resposta = data.content?.[0]?.text || "Desculpe, tive um problema. Tente novamente em instantes! 🙏";
+  const resposta = data.choices?.[0]?.message?.content
+    || "Desculpe, tive um problema. Tente novamente em instantes! 🙏";
+
   addMensagem(numero, "assistant", resposta);
   return resposta;
 }
