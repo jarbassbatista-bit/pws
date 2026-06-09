@@ -7,8 +7,8 @@ app.use(express.json());
 // ============================================================
 const CONFIG = {
   //ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,   // console.anthropic.com
-  ZAPI_INSTANCE:     "3F45B51C74DFF2AA7AA7FE743DE93AC5",   // z-api.io (opcional, ver README)
-  ZAPI_TOKEN:        "32AB06403048DB069ED55973", // feito
+  ZAPI_INSTANCE: "3F45B51C74DFF2AA7AA7FE743DE93AC5",
+  ZAPI_TOKEN:    "32AB06403048DB069ED55973",
   SEU_NUMERO:        "5511992564805",           // seu número para notificações
   PIX_CHAVE:         "11992564805",
   MERCADO_PAGO_LINK: "https://mpago.la/2e62Exg",
