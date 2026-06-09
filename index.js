@@ -130,12 +130,19 @@ async function chamarClaude(numero, mensagemUsuario) {
 // ENVIAR MENSAGEM VIA Z-API
 // ============================================================
 async function enviarMensagem(numero, texto) {
-  const url = `https://api.z-api.io/instances/${CONFIG.ZAPI_INSTANCE}/token/${CONFIG.ZAPI_TOKEN}/send-text`;
-  await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ phone: numero, message: texto }),
-  });
+  try {
+    const url = `https://api.z-api.io/instances/${process.env.ZAPI_INSTANCE}/token/${process.env.ZAPI_TOKEN}/send-text`;
+    console.log("ZAPI URL:", url);
+    const resp = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ phone: numero, message: texto }),
+    });
+    const data = await resp.json();
+    console.log("ZAPI RESPOSTA:", JSON.stringify(data));
+  } catch (err) {
+    console.error("ZAPI ERRO:", err.message);
+  }
 }
 
 // ============================================================
