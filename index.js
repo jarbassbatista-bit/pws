@@ -94,28 +94,36 @@ async function chamarClaude(numero, mensagemUsuario) {
   addMensagem(numero, "user", mensagemUsuario);
   const historico = getHistorico(numero);
 
-  const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${process.env.GROQ_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: "llama3-70b-8192",
-      max_tokens: 1000,
-      messages: [
-        { role: "system", content: SISTEMA_PROMPT },
-        ...historico,
-      ],
-    }),
-  });
+  try {
+    const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.GROQ_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "llama3-70b-8192",
+        max_tokens: 1000,
+        messages: [
+          { role: "system", content: SISTEMA_PROMPT },
+          ...historico,
+        ],
+      }),
+    });
 
-  const data = await response.json();
-  const resposta = data.choices?.[0]?.message?.content
-    || "Desculpe, tive um problema. Tente novamente em instantes! 🙏";
+    const data = await response.json();
+    console.log("GROQ RESPOSTA:", JSON.stringify(data)); // ← diagnóstico
+    
+    const resposta = data.choices?.[0]?.message?.content
+      || "Desculpe, tive um problema. Tente novamente em instantes! 🙏";
+    
+    addMensagem(numero, "assistant", resposta);
+    return resposta;
 
-  addMensagem(numero, "assistant", resposta);
-  return resposta;
+  } catch (err) {
+    console.error("GROQ ERRO:", err.message);
+    return "Desculpe, tive um problema. Tente novamente em instantes! 🙏";
+  }
 }
 
 // ============================================================
