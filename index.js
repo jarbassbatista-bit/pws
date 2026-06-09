@@ -131,7 +131,7 @@ async function chamarClaude(numero, mensagemUsuario) {
 // ============================================================
 async function enviarMensagem(numero, texto) {
   try {
-    const url = `https://api.z-api.io/instances/${process.env.ZAPI_INSTANCE}/token/${process.env.ZAPI_TOKEN}/send-text`;
+    const url = `https://api.z-api.io/instances/${CONFIG.ZAPI_INSTANCE}/token/${CONFIG.ZAPI_TOKEN}/send-text`;
     console.log("ZAPI URL:", url);
     const resp = await fetch(url, {
       method: "POST",
