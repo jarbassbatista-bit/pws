@@ -1,0 +1,57 @@
+Power Streaming - atualizacao 2026.09.03-intercalacao.1
+Execucao local isolada: 03/09/2026.
+Nao houve envio real, acesso ao WhatsApp ou chamada ao Gemini.
+A fonte usada nos testes privados foi o arquivo Python anexado pelo usuario.
+Os dados de 4000 contatos utilizados no teste sao sinteticos.
+Os 11 testes de arquivo original sao opcionais no pacote publico (variavel POWER_STREAMING_FONTE_TESTE).
+
+test_base_de_4000_aborda_so_um_por_chamada (test_intercalacao.TestArquivoEnviado.test_base_de_4000_aborda_so_um_por_chamada) ... ok
+test_bloqueado_duplicado_pendente_e_ja_abordado_preservados (test_intercalacao.TestArquivoEnviado.test_bloqueado_duplicado_pendente_e_ja_abordado_preservados) ... ok
+test_codigo_enviado_aceito_e_compila (test_intercalacao.TestArquivoEnviado.test_codigo_enviado_aceito_e_compila) ... ok
+test_mensagem_inicial_preservada_e_sem_telefone_no_nome (test_intercalacao.TestArquivoEnviado.test_mensagem_inicial_preservada_e_sem_telefone_no_nome) ... ok
+test_modos_1_e_5_continuam_no_mesmo_agendador (test_intercalacao.TestArquivoEnviado.test_modos_1_e_5_continuam_no_mesmo_agendador) ... ok
+test_proxima_chamada_avanca_sem_repetir_confirmado (test_intercalacao.TestArquivoEnviado.test_proxima_chamada_avanca_sem_repetir_confirmado) ... ok
+test_reproduz_tres_rotinas_seguidas_no_agendador_anterior (test_intercalacao.TestArquivoEnviado.test_reproduz_tres_rotinas_seguidas_no_agendador_anterior) ... ok
+test_resposta_encontrada_ao_abrir_nao_recebe_propaganda (test_intercalacao.TestArquivoEnviado.test_resposta_encontrada_ao_abrir_nao_recebe_propaganda) ... ok
+test_sem_confirmacao_nao_promove_nem_marca_abordado (test_intercalacao.TestArquivoEnviado.test_sem_confirmacao_nao_promove_nem_marca_abordado) ... ok
+test_sem_elegiveis_nao_abre_conversa (test_intercalacao.TestArquivoEnviado.test_sem_elegiveis_nao_abre_conversa) ... ok
+test_todas_as_76_outras_funcoes_preservadas (test_intercalacao.TestArquivoEnviado.test_todas_as_76_outras_funcoes_preservadas) ... ok
+test_apenas_verificar_nao_grava_nada (test_intercalacao.TestAtualizador.test_apenas_verificar_nao_grava_nada) ... ok
+test_arquivo_inexistente_nao_cria_programa_vazio (test_intercalacao.TestAtualizador.test_arquivo_inexistente_nao_cria_programa_vazio) ... ok
+test_backup_exato_e_outros_arquivos_intactos (test_intercalacao.TestAtualizador.test_backup_exato_e_outros_arquivos_intactos) ... ok
+test_edicao_concorrente_nao_e_sobrescrita (test_intercalacao.TestAtualizador.test_edicao_concorrente_nao_e_sobrescrita) ... ok
+test_falha_gravacao_preserva_script_e_backup (test_intercalacao.TestAtualizador.test_falha_gravacao_preserva_script_e_backup) ... ok
+test_preserva_crlf_e_bom (test_intercalacao.TestAtualizador.test_preserva_crlf_e_bom) ... ok
+test_reaplicar_e_idempotente (test_intercalacao.TestAtualizador.test_reaplicar_e_idempotente) ... ok
+test_so_tres_funcoes_podem_diferir (test_intercalacao.TestAtualizador.test_so_tres_funcoes_podem_diferir) ... ok
+test_trecho_incompleto_recusado (test_intercalacao.TestAtualizador.test_trecho_incompleto_recusado) ... ok
+test_versao_diferente_recusada_sem_backup_ou_substituicao (test_intercalacao.TestAtualizador.test_versao_diferente_recusada_sem_backup_ou_substituicao) ... ok
+test_agenda_sem_campos_nao_quebra_status (test_intercalacao.TestCiclo.test_agenda_sem_campos_nao_quebra_status) ... ok
+test_atende_antes_e_depois_de_um_unico_lead (test_intercalacao.TestCiclo.test_atende_antes_e_depois_de_um_unico_lead) ... ok
+test_chat_resolvido_sem_nova_mensagem_nao_bloqueia (test_intercalacao.TestCiclo.test_chat_resolvido_sem_nova_mensagem_nao_bloqueia) ... ok
+test_chat_retry_em_backoff_nao_trava_todos (test_intercalacao.TestCiclo.test_chat_retry_em_backoff_nao_trava_todos) ... ok
+test_chat_retry_pronto_tem_prioridade (test_intercalacao.TestCiclo.test_chat_retry_pronto_tem_prioridade) ... ok
+test_ciclos_rapidos_nao_formam_lote (test_intercalacao.TestCiclo.test_ciclos_rapidos_nao_formam_lote) ... ok
+test_comando_dono_tem_prioridade (test_intercalacao.TestCiclo.test_comando_dono_tem_prioridade) ... ok
+test_falha_alerta_nao_desativa_base_fria (test_intercalacao.TestCiclo.test_falha_alerta_nao_desativa_base_fria) ... ok
+test_falha_do_atendimento_adia_rotina (test_intercalacao.TestCiclo.test_falha_do_atendimento_adia_rotina) ... ok
+test_falha_na_base_fria_reagenda_e_volta_ao_atendimento (test_intercalacao.TestCiclo.test_falha_na_base_fria_reagenda_e_volta_ao_atendimento) ... ok
+test_falha_na_leitura_nao_significa_fila_vazia (test_intercalacao.TestCiclo.test_falha_na_leitura_nao_significa_fila_vazia) ... ok
+test_falha_painel_nao_desativa_base_fria (test_intercalacao.TestCiclo.test_falha_painel_nao_desativa_base_fria) ... ok
+test_fila_pronta_adia_sem_consumir_prazo (test_intercalacao.TestCiclo.test_fila_pronta_adia_sem_consumir_prazo) ... ok
+test_nao_envia_antes_do_prazo (test_intercalacao.TestCiclo.test_nao_envia_antes_do_prazo) ... ok
+test_nova_mensagem_apos_chat_resolvido_tem_prioridade (test_intercalacao.TestCiclo.test_nova_mensagem_apos_chat_resolvido_tem_prioridade) ... ok
+test_novo_nao_lido_apos_alerta_adia_prospeccao (test_intercalacao.TestCiclo.test_novo_nao_lido_apos_alerta_adia_prospeccao) ... ok
+test_pendencia_em_backoff_nao_trava_todos (test_intercalacao.TestCiclo.test_pendencia_em_backoff_nao_trava_todos) ... ok
+test_pendencia_manual_nao_trava_todos (test_intercalacao.TestCiclo.test_pendencia_manual_nao_trava_todos) ... ok
+test_retomada_apos_atendimento_sem_nova_espera_de_sete_minutos (test_intercalacao.TestCiclo.test_retomada_apos_atendimento_sem_nova_espera_de_sete_minutos) ... ok
+test_rotina_mais_antiga_ganha_vez_sem_descartar_base (test_intercalacao.TestCiclo.test_rotina_mais_antiga_ganha_vez_sem_descartar_base) ... ok
+test_status_e_banner_nao_polui_cada_ciclo (test_intercalacao.TestCiclo.test_status_e_banner_nao_polui_cada_ciclo) ... ok
+test_status_informa_motivo_da_espera (test_intercalacao.TestCiclo.test_status_informa_motivo_da_espera) ... ok
+test_tentativa_longa_conta_intervalo_a_partir_do_final (test_intercalacao.TestCiclo.test_tentativa_longa_conta_intervalo_a_partir_do_final) ... ok
+test_todas_vencidas_executam_uma_por_ciclo (test_intercalacao.TestCiclo.test_todas_vencidas_executam_uma_por_ciclo) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 0.373s
+
+OK
